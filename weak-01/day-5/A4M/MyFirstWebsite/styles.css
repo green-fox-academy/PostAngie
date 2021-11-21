@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Courier Prime', monospace;
+    background-image: url(./assets/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+main{
+    padding: 5% 10%;
+}
+.title{
+        color: #ff0099;
+    }
+nav{
+    background: #333333;
+    height: 60px;
+    width: 100%;
+    padding: 0 10%;
+}
+.home{
+    display:inline-block;
+    padding-top: 15px;
+}
+.nav-link-container{
+    display:inline-block;
+    margin-left: 35%;
+    text-transform: uppercase;
+    font-size: larger;
+}
+.nav-link{
+    display:inline-block;
+    padding: 0 15px;
+}
+a{
+    color: #ff0099;
+}
+article h2{
+    text-align: center;
+    margin: 25px 0;
+}
+p{
+    line-height: 150%;
+}
+.sep{
+    text-align: center;
+    font-size: x-large;
+    font-stretch: expanded;
+    margin: 50px 0;
+}
+h1{
+    margin-bottom: 2%;
+}
+h2{
+    margin-bottom: 2%;
+}
+h3{
+    margin: 25px 0;
+}
