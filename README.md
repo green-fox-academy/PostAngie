@@ -4,7 +4,16 @@
 
 [Repo for Greenfox git lessons](https://github.com/PostAngie/git-lesson-repository)
 
+[Repo PostAngie github.io](https://github.com/PostAngie/PostAngie.github.io)
+
 ---
+
+[This is MyFirstWebsite](https://postangie.github.io)
+
+
+---
+### Usefull links:
 Markdown Here Cheatsheet
 [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
----
+
+Lessie A4M Syllabus [here](https://github.com/green-fox-academy/lassie-syllabus/wiki)
