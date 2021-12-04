@@ -1,0 +1,10 @@
+create a link for your syllabus repo with a nice title (stage, commit and push)
+
+git push parancs után mikor kell írni valamit és mikor nem?
+
+nézzük át még egyszer, hogy melyik napra mivel, hogyan érdemes készülni
+
+hogyan vegyem kezelésbe az új szoftvereket? 
+
+Mi a ts node és typescript és a node.js? miért kell 3?
+
