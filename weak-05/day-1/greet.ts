@@ -4,3 +4,7 @@
 // -  Greet `nameToGreet`
 'use strict';
 let nameToGreet: string = 'Green Fox'
+function greetTheName (nameToGreet: string) {
+    console.log('Greetings dear ' + nameToGreet);
+};
+greetTheName(nameToGreet);
