@@ -14,4 +14,4 @@ if (firstList.length < secondList.length) {
     console.log("secondList is longer")
 } else {
     console.log("firstList is the longer one")
-};
+}

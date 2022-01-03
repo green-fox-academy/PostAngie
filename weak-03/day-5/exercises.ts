@@ -107,6 +107,12 @@ volume = k*l*m;
 console.log('Volume: ' + volume);
 
 console.log('Exercise Seconds in a day');
+// let currentHours: number = 14;
+// let currentMinutes: number = 34;
+// let currentSeconds: number = 42;
+// Write a program that prints the remaining seconds (as an integer) from a
+// day if the current time is represented by these variables
+
 let currentHours: number = 14;
 let currentMinutes: number = 34;
 currentMinutes *=60;

@@ -4,11 +4,10 @@
 // -  Log the result of `doubleNumber(baseNumber)` to the console
 'use strict';
 let baseNumber: number = 123;
-function doubleIt(baseNumber: number): number {
-    return baseNumber * 2
+function doubleIt(inputNumber: number): number {
+    return inputNumber * 2
 };
-doubleIt(baseNumber);
-console.log("This is the double: " + doubleIt(123));
+console.log("This is the double: " + doubleIt(baseNumber));
 
 // other way
 let baseNumber2: number = 123

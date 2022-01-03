@@ -1,15 +1,16 @@
 'use strict';
+let lineCount: number = 4;
 
 export function drawPyramid(lineCount: number) {
-    lineCount = 4;
-    let n: number = 1;
-    let i: number = 0;
-    let pad: number = lineCount
-    let draw: string = '*';
-    while (n <= lineCount) {
-        console.log(draw.padStart(pad) + draw.repeat(i));
-        n++;
-        i += 2;
-        pad--;
+    let output: string = '';
+    for (let i = 1; i <= lineCount; i++) {
+        for (let j = 1; j <= lineCount-i; j++){
+            output += " ";
+        }
+        for (let k=0; k < 2 * i - 1; k++) {
+            output += '*';
+        }
+    output += '\n';
     }
-}
+    console.log(output);
+};

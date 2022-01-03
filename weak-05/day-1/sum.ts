@@ -1,11 +1,13 @@
 // Write a function called `sum()` that returns the sum of numbers from zero to the given parameter
 
 'use strict';
-let untilThis: number = 12
+export function sum (param: number) {
 function sum (sumOfNumbers: number): number {
-    for (let i=0; i <= untilThis; i++) {
-        sumOfNumbers += i
+   let output: number = 0;
+    for (let i=0; i <= sumOfNumbers; i++) {
+        output += i
     }
-    return sumOfNumbers;
+    return output;
 };
-console.log(sum(untilThis));
+console.log(sum(12));
+};

@@ -21,10 +21,9 @@ console.log(contacts['John K. Miller']);
 
 
 // Whose phone number is 307-687-2982?
-Object.entries(contacts).forEach (item => {
-    if (item[1] === '307-687-2982') {
-        console.log(item[0]);
-        return;
+Object.entries(contacts).forEach (([key, value]) => {
+    if (value === '307-687-2982') {
+        console.log(key)
     };
 });
 
