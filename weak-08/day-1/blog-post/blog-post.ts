@@ -27,7 +27,7 @@ export class BlogPost {
         this. publicationDate = publicationDate;
     }
     getContent (): void {
-    console.log(this.title + ' titled by ' + this.authorName + ' posted at ' + this.publicationDate.toString);
+    console.log(this.title + ' titled by ' + this.authorName + ' posted at ' + this.publicationDate.toString());
     console.log(this.text);
     }
 }
