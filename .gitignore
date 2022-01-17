@@ -2,4 +2,6 @@
 ./weak-01/
 *.zip
 *.ppt
+*.pptx
 code_help.txt
+node_modules/
