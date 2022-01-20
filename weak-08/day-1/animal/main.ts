@@ -12,8 +12,8 @@ let cat = new Animal()
 let dog = new Animal()
 
 cat.play()
-console.log(cat.thirstValue + ' ' + cat.hungerValue);
+console.log(cat.getHungerValue() + ' ' + cat.getHungerValue());
 
 dog.eat()
-console.log(dog.hungerValue);
+console.log(dog.getHungerValue());
 

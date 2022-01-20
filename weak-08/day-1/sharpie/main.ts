@@ -16,6 +16,6 @@ greenSharpie.use();
 greenSharpie.use();
 redSharpie.use();
 
-console.log(greenSharpie.inkAmount);
-console.log(redSharpie.inkAmount);
+console.log(greenSharpie);
+console.log(redSharpie);
 

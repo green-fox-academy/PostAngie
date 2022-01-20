@@ -1,6 +1,6 @@
 'use strict';
-import { Student } from "./teachers-and-students";
-import { Teacher } from "./teachers-and-students";
+import { Student } from "./student";
+import { Teacher } from "./teacher";
 
 // Instantiate a Student and Teacher object
 

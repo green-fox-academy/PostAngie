@@ -10,9 +10,9 @@
 // We can use() the sharpie objects: using it decreases inkAmount by 10
 
 export class Sharpie {
-    color: string;
-    width: number;
-    inkAmount: number;
+    private color: string;
+    private width: number;
+    private inkAmount: number;
 
     constructor (color: string, width: number) {
         this.color = color;
@@ -20,7 +20,7 @@ export class Sharpie {
         this.inkAmount = 100;
     }
 
-    use (): number {
+    use () {
         return this.inkAmount -= 10;
     }
 }

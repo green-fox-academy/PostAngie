@@ -17,24 +17,27 @@
 // Run the test file with ts-node
 
 export class Counter {
-    counter: number;
-    counterDefault: number;
+    private counter: number;
+    private counterDefault: number;
  
     constructor (counter: number = 0) {
         this.counter = counter;
         this.counterDefault = counter;
     }
-    add (number?: number): number {
+
+    add (number?: number) {
         if (!number) {
             return this.counter += 1;
         } else {
             return this.counter += number;
         }
     }
+    
     get (): number {
         return this.counter;
     }
-    reset (): number {
+    
+    reset () {
         return this.counter = this.counterDefault;
     }
 }

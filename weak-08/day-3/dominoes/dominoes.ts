@@ -22,27 +22,26 @@ let dominoes = initializeDominoes();
 /** You have the list of Dominoes */
 /** Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides */
 /** eg: [2, 4], [4, 3], [3, 5] ... */
-print(dominoes)
+print(dominoes);
+
+let dominoList: Domino [] = [dominoes[0]];
+
+for (let j = 0; j < dominoList.length; j++) {
+  for (let i = 1; i < dominoes.length; i++) {
+    if (dominoList[j].getValues()[1] === dominoes[i].getValues()[0]){
+      dominoList.push(dominoes[i]);
+    }
+  }
+}
+
+print(dominoList);
+
+// Order them into one snake:
 
 let dominoArray: number[][] = [];
 
-for (let i=0; i<dominoes.length; i++){
-    let list: number [] = dominoes[i].getValues()
+for (let i=0; i<dominoList.length; i++){
+    let list: number [] = dominoList[i].getValues()
     dominoArray.push(list)
 }
 console.log(dominoArray);
-
-// innentől nincs még kész - visszatérek majd rá. Azt terveztem, hogy vagy array-jel dolgozom, azt rendezem valahogy
-// sorba vagy az objecteket rendezem és utána csinálok belőle array-t...
-
-// for (let i = 0; i < dominoArray.length; i++) {
-//     if (dominoArray[i][1] === dominoArray[i+1][0]) {
-//         continue
-//     } else {
-        
-//     }
-    
-// }
-
-
-// print(dominoes);

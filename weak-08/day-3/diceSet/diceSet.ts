@@ -1,4 +1,9 @@
 'use strict';
+
+function getRandomRoll (): number {
+  return Math.floor(Math.random() * 6 + 1)
+}
+
 class DiceSet {
   private dice: number[] = [];
   readonly numOfDices: number = 6;
@@ -6,7 +11,7 @@ class DiceSet {
   roll(): number[] {
     this.dice = [];
     for (let i = 0; i < this.numOfDices; i++) {
-      this.dice.push(Math.floor(Math.random() * 6 + 1));
+      this.dice.push(getRandomRoll());
     }
     return this.dice;
   }
@@ -14,10 +19,10 @@ class DiceSet {
   reroll(index?: number): void {
     if (index === undefined) {
       for (let i = 0; i < this.numOfDices; i++) {
-        this.dice[i] = Math.floor(Math.random() * 6 + 1);
+        this.dice[i] = getRandomRoll();
       }
     } else {
-      this.dice[index] = Math.floor(Math.random() * 6 + 1);
+      this.dice[index] = getRandomRoll();
     }
   }
 
@@ -29,6 +34,7 @@ class DiceSet {
     }
   }
 }
+
 // You have a `DiceSet` class which has a list for 6 dice
 // You can roll all of them with roll()
 // Check the current rolled numbers with getCurrent()
