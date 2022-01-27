@@ -7,3 +7,4 @@ code_help.txt
 node_modules/
 *_forme.ts
 *_forme/
+*.docx

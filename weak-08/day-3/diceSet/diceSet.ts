@@ -1,17 +1,17 @@
 'use strict';
 
-function getRandomRoll (): number {
-  return Math.floor(Math.random() * 6 + 1)
-}
-
 class DiceSet {
   private dice: number[] = [];
   readonly numOfDices: number = 6;
 
+  rollADice(): number {
+    return Math.floor(Math.random() * 6 + 1)
+  }
+
   roll(): number[] {
     this.dice = [];
     for (let i = 0; i < this.numOfDices; i++) {
-      this.dice.push(getRandomRoll());
+      this.dice.push(this.rollADice());
     }
     return this.dice;
   }
@@ -19,10 +19,10 @@ class DiceSet {
   reroll(index?: number): void {
     if (index === undefined) {
       for (let i = 0; i < this.numOfDices; i++) {
-        this.dice[i] = getRandomRoll();
+        this.dice[i] = this.rollADice();
       }
     } else {
-      this.dice[index] = getRandomRoll();
+      this.dice[index] = this.rollADice();
     }
   }
 
