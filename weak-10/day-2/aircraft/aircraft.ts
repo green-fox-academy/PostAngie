@@ -5,12 +5,10 @@ export class Aircraft {
     private maxAmmo: number;
     private baseDamage: number;
     private ammunition: number;
-    private type: string;
     
-    constructor (maxAmmo: number, baseDamage: number, type: string) {
+    constructor (maxAmmo: number, baseDamage: number) {
     this.maxAmmo = maxAmmo;
     this.baseDamage = baseDamage;
-    this.type = type;
     this.ammunition = 0;
     }
 
@@ -37,7 +35,7 @@ export class Aircraft {
     }
 
     getType (): string {
-        return this.type;
+        return this.constructor.name;
     }
     
     getStatus () {
@@ -46,7 +44,7 @@ export class Aircraft {
     }
 
     isPriority () : boolean {
-        return this.type === 'F35';
+        return this.getType() === 'F35';
     }
 
     getAllDamage (): number {

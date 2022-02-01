@@ -3,8 +3,8 @@ import { Flower } from "./flower";
 import { Tree } from "./tree";
 
 export class Plant {
-    protected color: string;
-    protected waterLevel: number;
+    private color: string;
+    private waterLevel: number;
     private waterNeed: number;
     private absorb: number;
     
@@ -31,7 +31,7 @@ export class Plant {
         return this.waterLevel <= this.waterNeed
     }
 
-    drinkWater(amount: number): number {
-        return this.waterLevel += amount * this.absorb;
+    drinkWater(amount: number): void {
+        this.waterLevel += amount * this.absorb;
     }   
 }

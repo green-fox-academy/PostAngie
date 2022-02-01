@@ -20,11 +20,11 @@ mother.add(crow);
 mother.add(flamingo);
 mother.add(hawk);
 
-// mother.getStatus();
-// console.log(os.EOL);
+mother.getStatus();
+console.log(os.EOL);
 
-// mother.fill();
-// mother.getStatus();
+mother.fill();
+mother.getStatus();
 console.log(os.EOL);
 
 
@@ -36,6 +36,3 @@ mother.fight(grandmother);
 mother.getStatus();
 console.log(os.EOL);
 grandmother.getStatus();
-
-
-

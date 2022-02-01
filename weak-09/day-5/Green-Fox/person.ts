@@ -11,15 +11,15 @@ export class Person {
         this.gender = gender;
     }
     
-    introduce(){
+    introduce(): void {
         console.log('Hi, I\'am ' + this.name + ', a ' + this.age + ' year old ' + this.gender + '.');
     }
 
-    getGoal() {
+    getGoal(): void {
         console.log("My goal is: Live for the moment!");
     }
 
-    getIntroduction () {
+    getIntroduction (): string {
         return 'Hi, I\'am ' + this.name + ', a ' + this.age + ' year old ' + this.gender;
     }
 }

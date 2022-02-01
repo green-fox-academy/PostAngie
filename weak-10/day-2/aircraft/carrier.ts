@@ -12,11 +12,11 @@ export class Carrier {
         this.listOfAirCrafts = [];
     }
 
-    add (aircraft: Aircraft) {
-        return this.listOfAirCrafts.push(aircraft);
+    add (aircraft: Aircraft): void {
+        this.listOfAirCrafts.push(aircraft);
     }
 
-    fill () {
+    fill (): void {
         let sumOfNeeded: number = 0;
         let used: number = 0;
         for (let i = 0; i < this.listOfAirCrafts.length; i++) {
@@ -39,7 +39,7 @@ export class Carrier {
         this.ammoStore -= used;
     }
 
-    fight (carrier: Carrier) {
+    fight (carrier: Carrier): void {
         for (let i = 0; i < this.listOfAirCrafts.length; i++) {
             carrier.healthPoint -= this.listOfAirCrafts[i].fight();
         }
@@ -53,7 +53,7 @@ export class Carrier {
         return totalDamage;
     }
 
-    getStatus () {
+    getStatus (): void {
         if (this.healthPoint <= 0) {
             console.log('It\'s dead Jim :(');
         } else {
@@ -65,5 +65,4 @@ export class Carrier {
         });
         }
     }
-
 }
