@@ -14,17 +14,17 @@ let fleet = new Fleet();
 // 3. [x] Stand up
 // 4. [x] Eat lunch
 
-let milk = new Thing('Get milk')
-let obstacles = new Thing('Remove the obstacles')
-let standUp = new Thing('Stand up')
-let eat = new Thing('Eat lunch')
+let milk = new Thing('Get milk');
+let obstacles = new Thing('Remove the obstacles');
+let standUp = new Thing('Stand up');
+let eat = new Thing('Eat lunch');
 
 standUp.complete();
 eat.complete();
 
-fleet.add(milk)
-fleet.add(obstacles)
-fleet.add(standUp)
-fleet.add(eat)
+fleet.add(milk);
+fleet.add(obstacles);
+fleet.add(standUp);
+fleet.add(eat);
 
 console.log(fleet.toString());
