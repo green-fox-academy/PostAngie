@@ -1,3 +1,5 @@
+[Repo for my Wanderer game](https://github.com/PostAngie/wanderer-typescript)
+
 [Repo for my Todo app](https://github.com/PostAngie/todo-app)
 
 [Repo for my ideas](https://github.com/PostAngie/World-of-Angie)
