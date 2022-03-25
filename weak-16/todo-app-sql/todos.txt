@@ -1,0 +1,15 @@
+Adatbázis neve: todos
+
+Table: tasks
+    id int primary
+    name text(240)
+    date date
+    priority int
+    is_done boolean
+    is_deleted boolean
+    user_id int foreign key
+
+Table: users
+    id int primary
+    firs_name varchar(120)
+    last_name varchar(120)

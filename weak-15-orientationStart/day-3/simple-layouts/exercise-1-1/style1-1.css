@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.item-green {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+}
+
+.item-yellow {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+
+.item-purple {
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+}
