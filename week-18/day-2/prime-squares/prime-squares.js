@@ -5,16 +5,13 @@ let section = document.getElementsByTagName('section')[0];
 
 function create100DivsWithClasses() {
     for (i = 1; i <= 100; i++) {
+        let div = document.createElement("div");
+        section.appendChild(div);
+        div.textContent = i
         if (!isPrime(i)) {
-            let div = document.createElement("div");
-            section.appendChild(div);
-            div.textContent = i
             div.className = "not-prime";
         }
         else {
-            let div = document.createElement("div");
-            section.appendChild(div);
-            div.textContent = i
             div.className = "prime";
         }
     }
@@ -48,7 +45,7 @@ for (i = 1; i <= 100; i++) {
 let divs = document.querySelectorAll("div");
 console.log(divs)
 let counter = 0;
-const callIsPrime = setInterval(() => {
+const timer = setInterval(() => {
     let currentElement = divs[counter];
     const num = parseInt(currentElement.textContent);
     if (!isPrime(num)) {
@@ -59,9 +56,7 @@ const callIsPrime = setInterval(() => {
     }
 
     if (counter === divs.length - 1) {
-        clearInterval(callIsPrime);
+        clearInterval(timer);
     }
     counter++;
-},
-100
-);
+}, 100);

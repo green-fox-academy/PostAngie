@@ -11,7 +11,7 @@ const countDown = setInterval(() => {
     }
     counter--;
 },
-1000
+    1000
 );
 
 // If you click on the button set the display to "Bomb defused" and stop the timeout
@@ -20,6 +20,3 @@ button.onclick = function () {
     display.textContent = "Bomb defused";
     clearInterval(countDown);
 }
-
-
-
