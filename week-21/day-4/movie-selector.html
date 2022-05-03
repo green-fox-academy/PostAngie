@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie selector</title>
+</head>
+
+<body>
+    <div>
+        <h2>Movie Selector</h2>
+        <form action="">
+            <select id="genre" name="genre">
+                <option value="select-genre">Select a genre</option>
+                <option value="scifi">Sci-fi</option>
+                <option value="drama">Drama</option>
+                <option value="comedy">Comedy</option>
+            </select>
+            <select id="movie" name="movie">
+                <option>Select a movie</option>
+                <option class="drama">Moon</option>
+                <option class="scifi">2001: A Space Odyssey</option>
+                <option class="scifi">Contact</option>
+                <option class="drama">Darkest Hour</option>
+                <option class="drama">There Will Be Blood</option>
+                <option class="drama">American Beauty</option>
+                <option class="comedy">Airplane!</option>
+                <option class="comedy">Deadpool</option>
+                <option class="comedy">Wayne's World</option>
+            </select>
+        </form>
+        <p>The selected movie is: </p>
+        <span class="write">-</span>
+    </div>
+    <script>
+        const movies = document.querySelector('#movie');
+        const genres = document.querySelector('#genre');
+        const logtext = document.querySelector('.write');
+        const movieOptions = [...movies.children];
+
+        movies.addEventListener(`change`, (e) => {
+            const select = e.target;
+            const text = select.options[select.selectedIndex].text;
+            logtext.textContent = text;
+        });
+
+        genres.addEventListener('change', (e) => {
+            const selected = e.target;
+            movies.innerHTML = movieOptions.filter(o => selected.value.includes(o.className)).map (o => o.outerHTML).join("");
+           });
+    </script>
+</body>
+
+</html>

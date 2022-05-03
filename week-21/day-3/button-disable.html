@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button disable</title>
+    <style>
+        body {
+            font-family: 'Arial';
+            color: darkslategrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form,
+        fieldset {
+            margin: 30px 0;
+            padding: 20px;
+        }
+
+        input {
+            display: inline-block;
+        }
+
+        label,
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset class="pets">
+            <legend>What is your favorite pet?</legend>
+            <input type="radio" name="fav-pet" id="dog">
+            <label for="dog">Dog</label>
+            <input type="radio" name="fav-pet" id="cat">
+            <label for="cat">Cat</label>
+            <input type="radio" name="fav-pet" id="fish">
+            <label for="fish">Viktor the goldfish</label>
+        </fieldset>
+        <fieldset class="facts">
+            <legend>Do you want to sign up for cat facts?</legend>
+            <input type="radio" name="choose" id="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" name="choose" id="no">
+            <label for="no">No</label>
+        </fieldset>
+        <button id="love_cats" disabled>I love cats</button>
+        <button id="signup" disabled>Sign up</button>
+    </form>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let loveCatsBtn = document.getElementById("love_cats");
+            let signupBtn = document.getElementById("signup");
+            let yesOrNoRadios = document.querySelectorAll('.facts input[type="radio"][name="choose"]');
+            let petsRadios = document.querySelectorAll('.pets input[type="radio"][name="fav-pet"]');
+            let allRadios = document.querySelectorAll('input[type="radio"]');
+            const yesRadio = document.querySelector('#yes');
+            const noRadio = document.querySelector('#no');
+            const dogRadio = document.querySelector('#dog');
+            const catRadio = document.querySelector('#cat');
+            const fishRadio = document.querySelector('#fish');
+
+            function setLoveCatBtn() {
+                loveCatsBtn.disabled = false;
+                if (!yesRadio.checked || noRadio.checked) {
+                    loveCatsBtn.disabled = true;
+                }
+                if (fishRadio.checked && noRadio.checked) {
+                    signupBtn.disabled = false;
+                }
+            }
+
+            function setSignupBtn() {
+                signupBtn.disabled = true;
+                if (dogRadio.checked || catRadio.checked || (fishRadio.checked && noRadio.checked)) {
+                    signupBtn.disabled = false;
+                }
+            }
+
+            allRadios.forEach(radio => {
+                if (radio.name == "choose") {
+                    radio.addEventListener('change', setLoveCatBtn);
+                } else {
+                    radio.addEventListener('change', setSignupBtn);
+                }
+            });
+
+            loveCatsBtn.onclick = function (event) {
+                event.preventDefault();
+                alert('Thank you, you\'ve successfully signed up for cat facts');
+            }
+            signupBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (fishRadio.checked && noRadio.checked) {
+                    alert('Sigh, we still added you to the cat facts list')
+                } else {
+                    alert('Thank you, you\'ve successfully signed up for cat facts');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

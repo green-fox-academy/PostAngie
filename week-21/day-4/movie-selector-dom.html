@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie selector DOM</title>
+</head>
+
+<body>
+    <div>
+        <h2>Movie Selector 2</h2>
+        <form action="">
+            <select id="genre" name="genre">
+                <option value="select-genre">Select a genre</option>
+            </select>
+            <select id="movie" name="movie">
+                <option>Select a movie</option>
+            </select>
+        </form>
+        <p class="log">The selected movie is: </p>
+    </div>
+    <script>
+        
+        let movieData = {
+            'Sci-fi': ['2001: A Space Odyssey', 'Contact', ],
+            'Drama': ['Moon', 'Darkest Hour', 'There Will Be Blood', 'American Beauty'],
+            'Comedy': ['Airplane!', 'Deadpool', 'Wayne\'s World']
+        }
+        const genresList = Object.keys(movieData);
+
+        const movies = document.querySelector('#movie');
+        const genres = document.querySelector('#genre');
+        const logtext = document.querySelector('.log');
+
+
+
+
+        movies.addEventListener(`change`, (e) => {
+            const select = e.target;
+            const text = select.options[select.selectedIndex].text;
+            logtext.textContent = text;
+        });
+
+        genres.addEventListener('change', (e) => {
+            
+           
+        });
+
+
+
+    </script>
+</body>
+<!-- ask mentor about setOptions method! -->
+</html>
