@@ -1,0 +1,37 @@
+body {
+    margin: 0 0 0 0;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+}
+
+.list-area {
+    display: grid;
+    grid-template-columns: 300px 500px;
+}
+
+label {
+    display: block;
+    color: dimgray;
+}
+
+button {
+   font-size: 20px;
+   height: 50px;
+   width: 150px;
+
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    font-size: 16px;
+}
+.instruction {
+    display: none;
+    padding: 20 px;
+}
+
+li {
+    cursor: pointer;
+}
