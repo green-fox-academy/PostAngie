@@ -111,3 +111,5 @@ function vote(req, res, upOrdown) {
         });
     });
 }
+
+module.exports = { app, pool };

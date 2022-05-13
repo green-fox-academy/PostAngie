@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    background-color: rgb(38, 37, 37);
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+     margin: 5%;
+}
+
+button {
+    background-color: black;
+    color: lightgray;
+    padding: 0.5em;
+}
+
+label {
+    color: white;
+    font-size: 14px;
+    padding: 0.5em;
+}
+
+label[for="delete-button"] {
+    background-color: rgb(212, 18, 18);
+}
+
+label[for="confirm-button"] {
+    background-color: green;
+}
+
+label {
+    opacity: 0;
+}
+
+button:hover + label {
+    opacity: 1;
+}
+
+
+button[data-action="delete"]:hover {
+    cursor:pointer;
+    color:red
+}
+button[data-action="confirm"]:hover {
+    cursor:pointer;
+    color: green;
+}
