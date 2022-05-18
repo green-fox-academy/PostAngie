@@ -1,0 +1,44 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+header {
+    background-image:url(./univerzum1.png);
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-size: 32px;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    padding-top: 60px;
+}
+#main-container {
+    display: flex;
+}
+
+
+#post-container{
+    width: 70%;
+}
+#sidebar-container {
+    display: flex;
+    float: left;
+    width: 30%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;;
+}
+#sidebar-container button{
+    width: 200px;
+    height: 50px;
+}
+.post-box {
+    border: 1px solid lightgray;
+}
+.vote p, button, a{
+    display: inline;
+    padding: 5px;
+}
