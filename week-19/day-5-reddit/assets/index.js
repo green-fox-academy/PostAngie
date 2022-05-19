@@ -1,8 +1,8 @@
 // Todos:
 // implement modify and remove links
 // fix up and down buttons to modify button, after voting
-// implement sidebar button to link to post page
-// implement post page
+// implement delete function
+// implement modify function
 
 function fillPostBox (data) {
     const postContainer = document.querySelector('#post-container');
@@ -25,9 +25,6 @@ function fillPostBox (data) {
         postContainer.innerHTML += postBox;
     });
 }
-function displayUpdatedScore (){
-
-}
 
 async function vote (id, upOrDown) {
     try {
@@ -49,6 +46,9 @@ async function vote (id, upOrDown) {
     }
 }
 
+async function redirect () {
+
+}
 
 window.addEventListener('DOMContentLoaded', async () => {
     let response, data;
@@ -79,5 +79,10 @@ window.addEventListener('DOMContentLoaded', async () => {
         })
     })
     
-    
+    const addButton = document.querySelector('#submit');
+    addButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href ="http://localhost:3000/addpost";
+    })
+
 });
