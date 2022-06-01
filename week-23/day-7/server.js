@@ -39,7 +39,7 @@ app.get('/api/genres', (req, res) => {
             res.sendStatus(500);
             return null;
         }
-        res.send({ genres: rows });
+        res.send(rows);
     });
 });
 // Create a GET /api/movies endpoint that returns all movies.
@@ -58,7 +58,7 @@ app.get('/api/movies', (req, res) => {
                 res.sendStatus(500);
                 return null;
             }
-            res.send({ movielist: rows });
+            res.send(rows);
         });
     }
     pool.query(query2, params, (err, rows) => {
@@ -67,7 +67,7 @@ app.get('/api/movies', (req, res) => {
             res.sendStatus(500);
             return null;
         }
-        res.send({ movies: rows });
+        res.send(rows);
     });
 });
 
