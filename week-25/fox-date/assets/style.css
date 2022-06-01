@@ -1,0 +1,11 @@
+fieldset {
+    display: inline-block;
+    width: 500px;
+    padding: 10px;
+    line-height: 200%;
+}
+
+legend {
+    font-weight: bold;
+    padding: 10 px;
+}

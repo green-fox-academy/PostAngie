@@ -20,6 +20,28 @@ pool.connect((err) => {
     }
 });
 app.use(express.json());
+app.use(express.static('assets'));
+
+app.get('/', (req, res) => {
+    res.redirect('/index.html');
+})
+
+app.get('/home', (req, res) => {
+    const query = `SELECT posts.id, title, url, score, timestamp, user_name FROM posts
+    LEFT JOIN users on users.post_id = posts.id;`
+    pool.query(query, (err, rows) => {
+        if (err) {
+            console.error(`Cannot retrieve data: ${err.toString()}`);
+            res.sendStatus(500);
+            return null;
+        }
+        res.send({ posts: rows });
+    });
+});
+
+app.get('/addpost', (req, res) => {
+    res.redirect('/addpost.html');
+});
 
 app.get('/posts', (req, res) => {
     pool.query('SELECT * FROM posts;', (err, rows) => {

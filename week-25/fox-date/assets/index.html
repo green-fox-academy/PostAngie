@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fox Dating</title>
+</head>
+
+<body>
+    <h2>Welcome to Fox Dating</h2>
+    <p class="msg"></p>
+    <form>
+        <fieldset>
+            <legend>Create Profile</legend>
+            <label for="username">My user name:</label>
+            <input type="text" id="username" required><br>
+
+            <label for="nickname">My nickname:</label>
+            <input type="text" id="nickname" required><br>
+
+            <span>I am a: </span>
+            <input type="radio" id="i-woman" value="woman" name="my_gender">
+            <label for="i-woman">Woman</label>
+
+            <input type="radio" id="i-man" value="man" name="my_gender">
+            <label for="i-man">Man</label><br>
+
+            <span>Looking for:</span>
+
+            <input type="radio" id="woman" value="woman" name="t_gender">
+            <label for="woman">Woman</label>
+
+            <input type="radio" id="man" value="man" name="t_gender">
+            <label for="man">Man</label>
+
+            <input type="radio" id="both" value="both" name="t_gender">
+            <label for="both">Both</label><br>
+
+            <label for="birth_year">I was born in:</label>
+            <input type="number" id="birth_year" required><br>
+
+            <label for="picture">My profile picture:</label>
+            <input type="url" id="picture" required><br>
+
+            <label for="aboutme">About me:</label><br>
+            <input type="text" id="aboutme"><br>
+
+            <button type="button">Submit</button>
+        </fieldset>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
